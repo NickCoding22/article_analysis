@@ -14,8 +14,7 @@ def get_google_results(topic, amount):
     return website_urls
 
 # Test Main Function
-'''
-test_results = get_google_results("College tuition", 5)
+'''test_results = get_google_results("College tuition", 5)
 print(test_results)
-'''
+#'''
 

@@ -1,7 +1,8 @@
 #https://docs.taipy.io/en/latest/knowledge_base/demos/image_classif/
 import together
 import Parser as parser
-together.api_key = "xxxxxx"
+import Keys
+together.api_key = Keys.together_api_key
 
 def analyze_website_LLM(website_url): 
     article_paragraph = ""

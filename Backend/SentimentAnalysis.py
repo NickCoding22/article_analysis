@@ -4,6 +4,8 @@ from hume.models.config import NerConfig
 
 from typing import Any, Dict, List
 
+import Keys
+
 def get_sentiment_from_article(full_text):
 
     f = open("article.txt", "w")
@@ -14,7 +16,7 @@ def get_sentiment_from_article(full_text):
         sentiment_map = {e["name"]: e["score"] for e in sentiment}
         return sentiment_map
 
-    client = HumeBatchClient("xxxxx")
+    client = HumeBatchClient(Keys.hume_api_key)
     #urls = ["https://storage.googleapis.com/hume-test-data/text/happy.txt"]
     config = LanguageConfig(sentiment={})
     #job = client.submit_job(urls, [config])
