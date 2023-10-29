@@ -25,3 +25,4 @@ def main (url):
 # print(main("https://www.defense.gov/News/News-Stories/Article/Article/3570190/dod-announces-up-to-150m-in-aid-for-ukraine/"))
 # Positive 
 # print(main("https://www.washingtonpost.com/opinions/2023/10/26/biden-constraining-israel-drawbacks/"))
+# print(main("https://www.nytimes.com/2023/10/27/us/san-francisco-new-slogan.html"))

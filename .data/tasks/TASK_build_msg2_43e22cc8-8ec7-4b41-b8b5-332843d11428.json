@@ -1,0 +1,19 @@
+{
+"id": "TASK_build_msg2_43e22cc8-8ec7-4b41-b8b5-332843d11428",
+"owner_id": "SCENARIO_scenario_e58dd4c2-dda4-4bf2-8503-6d96f83d0f73",
+"parent_ids": [
+"SCENARIO_scenario_e58dd4c2-dda4-4bf2-8503-6d96f83d0f73"
+],
+"config_id": "build_msg2",
+"input_ids": [
+"DATANODE_input_topic_19858c7c-2c7b-421c-aa4f-7247cd10aa57"
+],
+"function_name": "build_sentiment",
+"function_module": "__main__",
+"output_ids": [
+"DATANODE_sentiment_4ab8efb2-f40c-400b-9009-7c2edae2c1ce"
+],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c",
+"skippable": false,
+"properties": {}
+}
