@@ -1,0 +1,12 @@
+{
+"id": "JOB_build_msg2_a2288922-9ea0-4841-9da6-70b1a230b734",
+"task_id": "TASK_build_msg2_0763e90c-1b67-49c5-849e-f75195ce2073",
+"status": "<Status.RUNNING: 4>",
+"force": false,
+"submit_id": "SUBMISSION_70555265-383c-43e9-9baa-cb328baba24b",
+"submit_entity_id": "SCENARIO_scenario_488e79e9-43cb-434e-be03-4dd8a98b0e0a",
+"creation_date": "2023-10-29T09:11:10.349344",
+"subscribers": [],
+"stacktrace": [],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c"
+}

@@ -1,17 +1,31 @@
 import taipy as tp
 from taipy import Config, Core, Gui
-from Main.py import main
-
-
+from Main import main
+import SentimentAnalysis
+import Parser
+import Backend
 
 def main0(str):
-    return main(str)[0]
+    return str
+    
 
 def main2(str):
-    return main(str)[1]
+    sent = SentimentAnalysis.get_sentiment_from_article(Parser.parse_website(str))
+    final_sent = ''
+    negative_total = sent["Extremely Negative"] + sent["Very Negative"] + sent["Slightly Negative"] + sent["Negative"]
+    positive_total = sent["Extremely Positive"] + sent["Very Positive"] + sent["Slightly Positive"] + sent["Positive"]
+    if positive_total > sent["Neutral"] or negative_total > sent["Neutral"]:
+        if positive_total > negative_total:
+            final_sent = "Postive: Positive language was roughly " + str(positive_total) + " of the text."
+        else:
+            final_sent = "Negative: Negative language was roughly " + str(negative_total) + " of the text."
+    else: 
+        final_sent = "Neutral."
+    return final_sent
 
 def main3(str):
-    return main(str)[2]
+    summary = Backend.analyze_website_LLM(str)["main points"]
+    return summary
 
 ################################################################
 # Configure application
@@ -45,7 +59,7 @@ scenario_cfg = Config.configure_scenario("scenario", task_configs=[build_msg_tas
 # Design graphical interface
 ################################################################
 
-input_topic = "Taipy"
+input_topic = "https://www.sfchronicle.com/bayarea/article/sf-city-college-revive-18417567.php"
 Summary = None
 sentiment = None
 url = None
@@ -64,19 +78,13 @@ Topic:
 <|submit|button|on_action=submit_scenario|>
 
 Summary:
-<|{Summary[0]}|text|>
-<|{Summary[1]}|text|>
-<|{Summary[2]}|text|>
+<|{Summary}|text|>
 
 sentiment:
-<|{sentiment[0]}|text|>
-<|{sentiment[1]}|text|>
-<|{sentiment[2]}|text|>
+<|{sentiment}|text|>
 
 url:
-<|{url[0]}|text|>
-<|{url[1]}|text|>
-<|{url[2]}|text|>
+<|{url}|text|>
 """
 
 if __name__ == "__main__":

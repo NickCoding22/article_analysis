@@ -6,7 +6,6 @@ import SentimentAnalysis
 def main (url):
     sent = SentimentAnalysis.get_sentiment_from_article(Parser.parse_website(url))
     final_sent = 0
-    sent_val = 0
     negative_total = sent["Extremely Negative"] + sent["Very Negative"] + sent["Slightly Negative"] + sent["Negative"]
     positive_total = sent["Extremely Positive"] + sent["Very Positive"] + sent["Slightly Positive"] + sent["Positive"]
     if positive_total > sent["Neutral"] or negative_total > sent["Neutral"]:
