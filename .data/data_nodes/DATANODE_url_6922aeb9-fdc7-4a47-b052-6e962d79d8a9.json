@@ -1,0 +1,31 @@
+{
+"id": "DATANODE_url_6922aeb9-fdc7-4a47-b052-6e962d79d8a9",
+"config_id": "url",
+"scope": "<Scope.SCENARIO: 1>",
+"storage_type": "pickle",
+"name": null,
+"owner_id": "SCENARIO_scenario_2a5608fb-9b29-4a8c-970c-37b8e8166ef9",
+"parent_ids": [
+"TASK_build_msg3_10f19dff-a262-4cf9-a750-ff44497c1878"
+],
+"last_edit_date": "2023-10-29T12:25:49.380473",
+"edits": [
+{
+"job_id": "JOB_build_msg3_4afe553f-3b8f-403f-960c-0312230629e3",
+"timestamp": "2023-10-29T12:24:26.540990"
+},
+{
+"job_id": "JOB_build_msg3_f42c74c0-f321-4fc7-936b-f7f2b9a3ac8a",
+"timestamp": "2023-10-29T12:25:49.380473"
+}
+],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c",
+"validity_days": null,
+"validity_seconds": null,
+"edit_in_progress": false,
+"editor_id": null,
+"editor_expiration_date": null,
+"data_node_properties": {
+"is_generated": true
+}
+}

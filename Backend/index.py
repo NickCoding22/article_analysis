@@ -6,30 +6,50 @@ import Parser
 import Backend
 from taipy import Gui
 
-
+myTheme  = {
+        "palette": {
+            "mode": 'dark',
+            "primary": {
+            "main": '#00a2a2',
+            },
+            "secondary": {
+            "main": '#f50057',
+            
+            },
+            "background": {
+            "default": '#121212',
+            "paper": '#040404',
+            },
+        },
+        };
 
 
 def main0(str):
     return str
     
 
-def main2(str):
-    sent = SentimentAnalysis.get_sentiment_from_article(Parser.parse_website(str))
+def main2(str1):
+    sent = SentimentAnalysis.get_sentiment_from_article(Parser.parse_website(str1))
     final_sent = ''
     negative_total = sent["Extremely Negative"] + sent["Very Negative"] + sent["Slightly Negative"] + sent["Negative"]
     positive_total = sent["Extremely Positive"] + sent["Very Positive"] + sent["Slightly Positive"] + sent["Positive"]
+    neg = str(negative_total)
+    pos = str(positive_total)
     if positive_total > sent["Neutral"] or negative_total > sent["Neutral"]:
         if positive_total > negative_total:
-            final_sent = "Postive: Positive language was roughly " + str(positive_total) + " of the text."
+            final_sent = "This article takes a POSITIVE perspective with an index of: " + pos
         else:
-            final_sent = "Negative: Negative language was roughly " + str(negative_total) + " of the text."
+            final_sent = "This article takes a NEGATIVE perspective with an index of: " + neg
     else: 
         final_sent = "Neutral."
+    print(final_sent,"lokawdwa")
     return final_sent
 
 def main3(str):
     summary = Backend.analyze_website_LLM(str)["main points"]
+    print(summary,"summary")
     return summary
+    """return "Together API: Down"""
 
 ################################################################
 # Configure application
@@ -76,22 +96,25 @@ def submit_scenario(state):
     state.url = state.scenario.url.read()
 
 page = """
+Article Sentiment Comprehenseion (ASC)
+
 Topic:
 <|{input_topic}|input|>
 
 <|submit|button|on_action=submit_scenario|>
 
-Summary:
-{ .blue-line }
+URL:
 
 <|{Summary}|text|>
 
-sentiment:
-<|{sentiment}|text| classname="option"|>
+Sentiment:
+<|{sentiment}|text|>
 
-url:
-<|{url}|text| id="my_button"|>
+Summary:
+<|{url}|text|>
 """
+newGui = Gui(page,css_file = "style.css")
+
 
 if __name__ == "__main__":
     ################################################################
@@ -107,5 +130,6 @@ if __name__ == "__main__":
     ################################################################
     # Instantiate and run Gui service
     ################################################################
+   
 
-    Gui(page=page, pages=None, css_file="style.css", path_mapping={}, env_filename=None, flask=None).run()
+    newGui.run(theme = myTheme)
