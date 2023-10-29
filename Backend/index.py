@@ -85,10 +85,10 @@ Summary:
 <|{Summary}|text|>
 
 sentiment:
-<|{sentiment}|text|>
+<|{sentiment}|text| classname="option"|>
 
 url:
-<|{url}|text|>
+<|{url}|text| id="my_button"|>
 """
 
 if __name__ == "__main__":
