@@ -1,0 +1,27 @@
+{
+"id": "DATANODE_sentiment_ff605d28-8854-45bd-98c0-074d4367704b",
+"config_id": "sentiment",
+"scope": "<Scope.SCENARIO: 1>",
+"storage_type": "pickle",
+"name": null,
+"owner_id": "SCENARIO_scenario_6f2fc4e5-85b3-44df-ba92-6d49b136ce66",
+"parent_ids": [
+"TASK_build_msg2_65fb3b8c-7612-4c20-a433-5c12a9f4183a"
+],
+"last_edit_date": "2023-10-28T21:14:55.296682",
+"edits": [
+{
+"job_id": "JOB_build_msg2_49bcd3f6-c354-4462-976e-ac615df1f4bc",
+"timestamp": "2023-10-28T21:14:55.296682"
+}
+],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c",
+"validity_days": null,
+"validity_seconds": null,
+"edit_in_progress": false,
+"editor_id": null,
+"editor_expiration_date": null,
+"data_node_properties": {
+"is_generated": true
+}
+}
