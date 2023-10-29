@@ -47,7 +47,27 @@ def get_sentiment_from_article(full_text):
                     total += 1
     for i in range(1, 10):
         sentiments[i] = sentiments[i] / total
-    print(sentiments[1:])
-    return(sentiments[1:])
-
-get_sentiment_from_article("Hey")
+    #print(sentiments[1:])
+    return_sentiments = {"Extremeley Negative": sentiments[1], 
+    "Very Negative": sentiments[2],
+    "Slightly Negative": sentiments[3],
+    "Negative": sentiments[4],
+    "Neutral": sentiments[5],
+    "Slightly Positive": sentiments[6],
+    "Positive": sentiments[7],
+    "Very Postive": sentiments[8], 
+    "Extremeley Positive": sentiments[9]
+    }
+    return(return_sentiments)
+''' Function Test
+Extremeley Negative
+Very Negative
+Slightly Negative
+Negative
+Neutral
+Slightly Positive
+Positive
+Very Postivie
+Extremeley Positive
+'''
+# print(get_sentiment_from_article("Hey"))
