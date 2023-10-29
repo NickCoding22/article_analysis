@@ -4,6 +4,10 @@ from Main import main
 import SentimentAnalysis
 import Parser
 import Backend
+from taipy import Gui
+
+
+
 
 def main0(str):
     return str
@@ -102,4 +106,4 @@ if __name__ == "__main__":
     # Instantiate and run Gui service
     ################################################################
 
-    Gui(page).run()
+    Gui(page=page, pages=None, css_file="style.css", path_mapping={}, env_filename=None, flask=None).run()
