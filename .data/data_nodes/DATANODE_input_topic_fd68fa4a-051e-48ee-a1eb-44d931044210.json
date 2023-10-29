@@ -1,0 +1,26 @@
+{
+"id": "DATANODE_input_topic_fd68fa4a-051e-48ee-a1eb-44d931044210",
+"config_id": "input_topic",
+"scope": "<Scope.SCENARIO: 1>",
+"storage_type": "pickle",
+"name": null,
+"owner_id": "SCENARIO_scenario_2ec6fd4a-0693-4638-a243-4ef170f2fe5f",
+"parent_ids": [
+"TASK_build_msg_98b9bc42-4873-47ae-b63c-30c04f829f26"
+],
+"last_edit_date": "2023-10-28T20:29:49.972169",
+"edits": [
+{
+"timestamp": "2023-10-28T20:29:49.972169"
+}
+],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c",
+"validity_days": null,
+"validity_seconds": null,
+"edit_in_progress": false,
+"editor_id": null,
+"editor_expiration_date": null,
+"data_node_properties": {
+"is_generated": true
+}
+}
