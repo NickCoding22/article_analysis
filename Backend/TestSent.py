@@ -16,7 +16,7 @@ from hume.models.config import LanguageConfig
 def get_sentiment_from_article (text):
     sentiments = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-    text_example = text[:1500]
+    text_example = text
     async def main():
         try:
             client = HumeStreamClient(Keys.hume_api_key)
@@ -38,11 +38,9 @@ def get_sentiment_from_article (text):
         "Neutral": sentiments[5],
         "Slightly Positive": sentiments[6],
         "Positive": sentiments[7],
-        "Very Positive": sentiments[8], 
+        "Very Postive": sentiments[8], 
         "Extremely Positive": sentiments[9]
     }
-    print(return_sentiments)
     return return_sentiments
 
 #print(get_sentiment_from_article("President Obama called Wednesday on Congress to extend a tax break for students included in last year's economic stimulus package, arguing that the policy provides more generous assistance. The American Opportunity Tax Credit program, which will cost $58 billion over a decade, is due to expire at the end of this year. In a statement to reporters in the White House Rose Garden, Obama said the tax breaks help make a college education more affordable for Americans. 'I am calling on Congress to make this tax credit permanent,"))
-#print(get_sentiment_from_article("yay I'm so happy"))

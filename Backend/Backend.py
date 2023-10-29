@@ -11,7 +11,7 @@ def analyze_website_LLM(website_url):
     #article_paragraph = parser.parse_website("https://www.sfchronicle.com/bayarea/article/sf-city-college-revive-18417567.php");
     #article_paragraph = parser.parse_website("https://www.defense.gov/News/News-Stories/Article/Article/3570190/dod-announces-up-to-150m-in-aid-for-ukraine/")
     article_paragraph = parser.parse_website(website_url)
-    prompt_request = "Summarize the following article in 3 sentences: [" + article_paragraph + "]"
+    prompt_request = "Just summarize the following article in 5 sentence paragraph: [" + article_paragraph + "]"
 
     output = together.Complete.create(
         prompt = prompt_request,
