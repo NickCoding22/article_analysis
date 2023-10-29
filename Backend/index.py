@@ -82,6 +82,8 @@ Topic:
 <|submit|button|on_action=submit_scenario|>
 
 Summary:
+{ .blue-line }
+
 <|{Summary}|text|>
 
 sentiment:
