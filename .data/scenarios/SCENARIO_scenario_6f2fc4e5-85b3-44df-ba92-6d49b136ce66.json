@@ -1,0 +1,18 @@
+{
+"id": "SCENARIO_scenario_6f2fc4e5-85b3-44df-ba92-6d49b136ce66",
+"config_id": "scenario",
+"tasks": [
+"TASK_build_msg_8771b37a-d8db-4670-918f-a9c2b2dbb022",
+"TASK_build_msg3_c1c2302e-0224-4b39-990d-537b24570b82",
+"TASK_build_msg2_65fb3b8c-7612-4c20-a433-5c12a9f4183a"
+],
+"additional_data_nodes": [],
+"properties": {},
+"creation_date": "2023-10-28T21:14:49.023703",
+"primary_scenario": false,
+"subscribers": [],
+"tags": [],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c",
+"sequences": null,
+"cycle": null
+}
