@@ -33,8 +33,8 @@ def main2(str1):
     final_sent = ''
     negative_total = sent["Extremely Negative"] + sent["Very Negative"] + sent["Slightly Negative"] + sent["Negative"]
     positive_total = sent["Extremely Positive"] + sent["Very Positive"] + sent["Slightly Positive"] + sent["Positive"]
-    neg = str(negative_total)
-    pos = str(positive_total)
+    neg = str(negative_total)[:5]
+    pos = str(positive_total)[:5]
     if positive_total > sent["Neutral"] or negative_total > sent["Neutral"]:
         if positive_total > negative_total:
             final_sent = "This article takes a POSITIVE perspective with an index of: " + pos

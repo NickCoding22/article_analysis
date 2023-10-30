@@ -1,0 +1,20 @@
+{
+"id": "JOB_build_msg3_d24cdf2e-ae51-4989-8258-5912ae015541",
+"task_id": "TASK_build_msg3_fd36e2e8-d62a-4ecd-96fb-efc8cdae206f",
+"status": "<Status.FAILED: 6>",
+"force": false,
+"submit_id": "SUBMISSION_27ff7ea8-6a51-49c4-a2f4-23f1be8a4459",
+"submit_entity_id": "SCENARIO_scenario_bae6b247-1405-4721-87d2-0986b8eaa518",
+"creation_date": "2023-10-29T17:37:18.115428",
+"subscribers": [
+{
+"fct_name": "_Orchestrator._on_status_change",
+"fct_params": [],
+"fct_module": "taipy.core._orchestrator._orchestrator"
+}
+],
+"stacktrace": [
+"Traceback (most recent call last):\n  File \"C:\\Users\\ratth\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\taipy\\core\\_orchestrator\\_dispatcher\\_task_function_wrapper.py\", line 39, in _wrapped_function\n    results = fct(*cls.__read_inputs(inputs))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ratth\\Downloads\\Spooky\\article_analysis\\Backend\\index.py\", line 65, in build_url\n    return main3(topic)\n           ^^^^^^^^^^^^\n  File \"C:\\Users\\ratth\\Downloads\\Spooky\\article_analysis\\Backend\\index.py\", line 49, in main3\n    summary = Backend.analyze_website_LLM(str)[\"main points\"]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ratth\\Downloads\\Spooky\\article_analysis\\Backend\\Backend.py\", line 16, in analyze_website_LLM\n    output = together.Complete.create(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ratth\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\together\\complete.py\", line 41, in create\n    response = create_post_request(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ratth\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\together\\utils.py\", line 109, in create_post_request\n    response.raise_for_status()\n  File \"C:\\Users\\ratth\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\requests\\models.py\", line 1021, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.together.xyz/api/inference\n"
+],
+"version": "21d4cbca-fbc2-4793-9489-99f870d8c63c"
+}
